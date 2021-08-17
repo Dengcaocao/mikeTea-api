@@ -1,6 +1,10 @@
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-const baseModel = mongoose.Schema({
+// const baseModel = mongoose.Schema({
+  
+// })
+
+module.exports = {
   createdAt: {
     type: Date,
     default: Date.now
@@ -9,6 +13,4 @@ const baseModel = mongoose.Schema({
     type: Date,
     default: Date.now
   }
-})
-
-module.exports = baseModel
+}

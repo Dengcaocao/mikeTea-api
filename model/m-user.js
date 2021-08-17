@@ -28,7 +28,7 @@ const user = mongoose.Schema({
     type: String,
     default: ''
   },
-  baseModel
+  ...baseModel
 })
 
 module.exports = user
