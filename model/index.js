@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { dbUrl } = require('../config/config.default')
 
-mongoose.connect(dbUrl)
+mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
 // 监听数据库连接
