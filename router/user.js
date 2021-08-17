@@ -3,6 +3,6 @@ const router = express.Router()
 
 const { register } = require('../contorller/user')
 
-router.get('/', register)
+router.post('/register', register)
 
 module.exports = router

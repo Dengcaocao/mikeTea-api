@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const { dbUrl } = require('../config/config.default')
 
+const user = require('./m-user')
+
 mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
@@ -23,3 +25,7 @@ db.on('close', () => {
 db.on('disconnected', () =>{
   console.log('数据库已断开连接!!!')
 })
+
+module.exports = {
+  userModel: mongoose.model('user', user)
+}
